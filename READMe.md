@@ -22,7 +22,19 @@
 
 **grettings.js**
 
-## 추가할 것
+- username이 submit되면 form 태그를 숨기고 인삿말 표시
+- submit된 username 값을 로컬저장소에 저장
+- 조건문을 사용하여 진입 시 username 정보가 없다면 form을 보이게하고, 이미 존재하면 인삿말 표시
+
+**todo.js**
+
+- 입력된 todo 리스트 데이터를 로컬저장소에 저장
+- 데이터에 접근하기 위해 단순히 원소형태가 아닌 `Date.now()` 를 활용해 랜덤한 id를 부여하여 Key:Value 형태로 저장
+- 이 때, todo 리스트 배열 객체와 로컬저장소 간의 데이터 교류를 위해 `JSON.stringify` `JSON.parse()` 를 통해 데이터타입 변환 함수 사용
+
+---
+
+### 추가할 내용
 
 - 모든 js파일에 주석 추가하기
 - CSS 원본과 비슷하게 수정하기
