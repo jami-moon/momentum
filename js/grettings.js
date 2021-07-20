@@ -26,7 +26,7 @@ loginForm.addEventListener("submit", onLoginSubmit);
 // submit 이벤트가 감지되면 onLoginSubmit 함수 실행
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}!`;
+  greeting.innerText = `Hello! ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 // 중복을 없애기 위한 함수설정, 파라미터 값은 어떤 것이 와도 상관없으니 위에서 선언한 변수 username과 혼동하지 말기.
@@ -40,7 +40,7 @@ if (savedUsername === null) {
   // 유저정보가 없다면 숨겨진 폼태그를 나타나게 하기
 
   loginForm.addEventListener("submit", onLoginSubmit);
-  // 클릭 이벤트 감지시키기
+  // submit 이벤트 감지시키기
 } else {
   paintGreetings(savedUsername);
   // 유저정보가 있으면 h1에 텍스트 추가하고 표시하기

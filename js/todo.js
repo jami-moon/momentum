@@ -41,14 +41,18 @@ function paintToDo(newToDoIn) {
 
   const toDoListItem = document.createElement("li");
   toDoListItem.id = newToDoIn.id;
+  toDoListItem.className = "todo-list__item";
   const toDoListSpan = document.createElement("span");
+  toDoListSpan.className = "todo-list__content";
   // ul에 들어갈 li와 li에 넣을 span을 생성하는 변수를 만든다
+  // li에는 newToDoObj에 추가한 랜덤 id값을 id로 부여
 
-  toDoListSpan.innerText = newToDoIn.text;
+  toDoListSpan.innerText = `• ${newToDoIn.text}`;
   // span 안에는 newTodoIn을 텍스트로 넣어준다.
   // 아래에서 이 함수에 넣는 인자를 문자열에서 객체 형태로 바꿔주면서 .text 추가
 
   const removeListBtn = document.createElement("button");
+  removeListBtn.className = "todo-list__btn--remove";
   // 리스트를 삭제하는 버튼 요소 생성 변수
 
   removeListBtn.innerText = "❌";

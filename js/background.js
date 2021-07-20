@@ -1,4 +1,4 @@
-const images = ["0.jpg", "1.jpg", "2.jpg"];
+const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 // 0부터 배열길이 만큼의 수 중 내림한 정수값만을 불러오는 변수

@@ -1,3 +1,180 @@
+html,
+body {
+  height: 100%;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+}
+
 .hidden {
   display: none !important;
+}
+
+.bg-img {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  font-size: 10rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: 8px;
+  margin-bottom: 30px;
+}
+
+.greeting {
+  height: 5rem;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.login-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.login-form__name {
+  width: 28rem;
+  height: 5rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.login-form__name::placeholder {
+  color: #fff;
+  font-size: 3rem;
+  transition: all 0.5s;
+}
+.login-form__name:hover::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.login-form__name:focus {
+  outline: none;
+}
+.login-form__name:focus::placeholder {
+  color: transparent;
+}
+.login-form__btn {
+  width: 4rem;
+  height: 2rem;
+  margin-left: 2rem;
+  background-color: rgba(173, 173, 173, 0.2);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* ToDo 리스트 작성 폼 */
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-form__question {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-form__input {
+  width: 28rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: all 0.5s;
+}
+.todo-form__input::placeholder {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+.todo-form__input:hover::placeholder {
+  color: rgba(255, 255, 255, 0.1);
+}
+.todo-form__input:focus {
+  outline: none;
+}
+.todo-form__input:focus::placeholder {
+  color: transparent;
+}
+/* 투두리스트 */
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.todo-list__content {
+  width: 20rem;
+}
+
+.todo-list__btn--remove {
+  margin-left: 1rem;
+  background-color: transparent;
+  font-size: 0.5rem;
+  outline: none;
+  border: none;
+}
+
+/* 명언구 */
+.quote {
+  max-width: 50rem;
+  text-align: center;
+  position: fixed;
+  bottom: 2rem;
+  line-height: 1.4;
+}
+.quote span {
+  color: #fff;
+}
+
+/* 도시, 날씨 */
+.weather {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+.weather__city {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.weather__condition {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.weather__temper {
+  color: #fff;
 }

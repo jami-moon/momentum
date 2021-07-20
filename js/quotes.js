@@ -20,7 +20,7 @@ const quotes = [
     author: "찰리 채플린",
   },
   {
-    quote: "직업에서 행복을 찾아라. 아니면 행복이 무엇인지 절대 모를 것이다",
+    quote: "직업에서 행복을 찾아라. 아니면 행복이 무엇인지 절대 모를 것이다.",
     author: "엘버트 허버드",
   },
   {
@@ -29,11 +29,11 @@ const quotes = [
   },
   {
     quote:
-      "행복의 문이 하나 닫히면 다른 문이 열린다 그러나 우리는 종종 닫힌 문을 멍하니 바라보다가 향해 열린 문을 보지 못하게 된다.",
+      "행복의 문이 하나 닫히면 다른 문이 열린다. 그러나 우리는 종종 닫힌 문을 멍하니 바라보다가 향해 열린 문을 보지 못하게 된다.",
     author: "헬렌켈러",
   },
   {
-    quote: "피할수 없으면 즐겨라",
+    quote: "피할수 없으면 즐겨라.",
     author: "로버트 엘리엇",
   },
   {
@@ -46,6 +46,9 @@ const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+// 0부터 1사이의 무작위 값을 받는 random()메서드에 배열의 갯수룰 곱한다음 floor 메서드로 내림 정수값 추출
+// 즉, [0]~[배열 길이 - 1]의 인덱스가 적용됨
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = `"${todaysQuote.quote}"`;
+author.innerText = `- ${todaysQuote.author}`;
+// 랜덤으로 추출한 배열 요소를 HTML 텍스트로 입력
