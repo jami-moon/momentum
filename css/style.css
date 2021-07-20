@@ -159,6 +159,7 @@ section {
 }
 .quote span {
   color: #fff;
+  word-break: keep-all;
 }
 
 /* 도시, 날씨 */
