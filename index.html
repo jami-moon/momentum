@@ -14,7 +14,13 @@
   <body>
     <section class="main">
       <div class="inner">
-        <h2 id="clock" class="clock">00:00:00</h2>
+        <div id="clock" class="clock">
+          <h2 class="clock__time">00:00:00</h2>
+          <span class="clock__ampm"></span>
+          <button class="clock__btn">
+            <div class="clock__btn-info hidden">24/12-hour clock</div>
+          </button>
+        </div>
         <h1 id="greeting" class="greeting hidden">Hello!</h1>
         <form id="login-form" class="login-form hidden">
           <input

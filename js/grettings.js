@@ -26,8 +26,17 @@ loginForm.addEventListener("submit", onLoginSubmit);
 // submit 이벤트가 감지되면 onLoginSubmit 함수 실행
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello! ${username}`;
+  const date = new Date();
+  const getHours = date.getHours();
+  if (getHours >= 6 && getHours <= 11) {
+    greeting.innerText = `Good Morning! ${username} :)`;
+  } else if (getHours >= 11 && getHours <= 17) {
+    greeting.innerText = `Good Afternoon! ${username} :)`;
+  } else {
+    greeting.innerText = `Good Evening! ${username} :)`;
+  }
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.add("show");
 }
 // 중복을 없애기 위한 함수설정, 파라미터 값은 어떤 것이 와도 상관없으니 위에서 선언한 변수 username과 혼동하지 말기.
 // 이렇게 설정한 함수는 위의 onLoginSubmit 함수에도 적용이 되는데, 함수선언과 var는 호이스팅이 적용되기 때문이다.
