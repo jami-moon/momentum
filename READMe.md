@@ -1,8 +1,3 @@
-# 1_momentum
-
-상태: README.md
-작성일시: 2021년 7월 21일 오후 10:00
-
 # 프로젝트명 : Momentum clone (chorm extention)
 
 사용언어 : HTMl, CSS, JavaScript
