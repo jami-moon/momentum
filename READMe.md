@@ -9,28 +9,31 @@
 
 기간 : 210717 ~
 
-참조 : https://nomadcoders.co/ 강의 (첫 커밋 내용까지)
+참조 : https://nomadcoders.co/ (첫 커밋 내용까지)
 
-**_background.js, quotes.js_**
+***background.js, quotes.js***
 
 - 배열에서 `Math.random()` 을 사용해 랜덤으로 이미지, 인용문 호출
 - HTML Element를 생성하고 HTML에 추가
 
-**_clock.js_**
+***clock.js***
 
 - `Date` 생성자함수를 사용하여 표준 빌트인 Date 객체를 생성
 - `Date` 내부 메서드를 사용하여 현재 시간, 분, 초 정보 받아오기
 - `setInterval` 함수를 사용하여 현재시간 표현
 
-**_geoloction.js_**
+***geoloction.js***
 
 - User의 현재 위도, 경도 정보 받아오기
-- openweathermap의 API를 사용하여 User 지역의 날씨정보 표시**_grettings.js_**
+- openweathermap의 API를 사용하여 User 지역의 날씨정보 표시
+
+***grettings.js***
+
 - username이 submit되면 form 태그를 숨기고 인삿말 표시
 - submit된 username 값을 로컬저장소에 저장
 - 조건문을 사용하여 진입 시 username 정보가 없다면 form을 보이게하고, 이미 존재하면 인삿말 표시
 
-**_todo.js_**
+***todo.js***
 
 - 입력된 todo 리스트 데이터를 로컬저장소에 저장
 - 데이터에 접근하기 위해 단순히 원소형태가 아닌 `Date.now()` 를 활용해 랜덤한 id를 부여하여 Key:Value 형태로 저장
@@ -44,40 +47,63 @@
 
 ## 210721 docs: 시간 표현 체계 변경
 
+***grettings.js***
+
 - 시간에 따라 다른 인삿말 추가
+    - 코드조각
+
+        ```jsx
+        function paintGreetings(username) {
+          const date = new Date();
+          const getHours = date.getHours();
+          if (getHours >= 6 && getHours <= 11) {
+            greeting.innerText = `Good Morning! ${username} :)`;
+          } else if (getHours >= 11 && getHours <= 17) {
+            greeting.innerText = `Good Afternoon! ${username} :)`;
+          } else {
+            greeting.innerText = `Good Evening! ${username} :)`;
+          }
+          greeting.classList.remove(HIDDEN_CLASSNAME);
+          greeting.classList.add("show");
+        }
+        ```
+
+***clock.js***
+
 - 12시간 체계로 변환하는 버튼 추가하기
+    - 코드조각
 
-```jsx
-const contains = ampmOnoff.classList.contains("change-twelve");
+        ```jsx
+        const contains = ampmOnoff.classList.contains("change-twelve");
 
-if (contains === true) {
+        if (contains === true) {
 
-// 12시간 체계 표시전 AM, PM 구분 해놓기
+        // 12시간 체계 표시전 AM, PM 구분 해놓기
 
-const ampm = hours >= 12 ? "PM" : "AM";
+        const ampm = hours >= 12 ? "PM" : "AM";
 
-// 24시 체계의 시간값에서 12로 나눈 나머지로 12시간 체계를 표현
+        // 24시 체계의 시간값에서 12로 나눈 나머지로 12시간 체계를 표현
 
-const changedHours = (hours %= 12);
+        const changedHours = (hours %= 12);
 
-// 12로 나눠져 0이라는 falsy한 값이 되면 12를 출력 (12시니까)
+        // 12로 나눠져 0이라는 falsy한 값이 되면 12를 출력 (12시니까)
 
-changedhours = changedHours || 12;
+        changedhours = changedHours || 12;
 
-// 화면에 표시
+        // 화면에 표시
 
-time.innerText = `${changedHours}:${minutes}:${seconds}`;
+        time.innerText = `${changedHours}:${minutes}:${seconds}`;
 
-ampmText.innerText = `${ampm}`;
+        ampmText.innerText = `${ampm}`;
 
-} else {
+        } else {
 
-// 클래스가 없을 경우 그대로 표시
+        // 클래스가 없을 경우 그대로 표시
 
-time.innerText = `${hours}:${minutes}:${seconds}`;
+        time.innerText = `${hours}:${minutes}:${seconds}`;
 
-ampmText.innerText = "";
-```
+        ampmText.innerText = "";
+        ```
 
 ---
 
@@ -85,12 +111,12 @@ ampmText.innerText = "";
 
 - ~~모든 js파일에 주석 추가하기~~ > 210720
 - ~~CSS 원본과 비슷하게 수정하기~~ > 210720
-- ~~이미지, 명언 리스트 분위기에 맞게 변경~~
+- ~~이미지, 명언 리스트 분위기에 맞게 변경~~ >210720
 - ~~시계 24시간 표현에서 12시간 표현로 변경하기(변경 토글버튼 까지 만들기)~~ > 210721
 
-  시계표현 정보를 로컬저장소에 저장하고 새로고침해도 초기화 되지 않게 만들기
+    시계표현 정보를 로컬저장소에 저장하고 새로고침해도 초기화 되지 않게 만들기
 
-- ~~시간에 따라 다른 인삿말 표시하기~~
+- ~~시간에 따라 다른 인삿말 표시하기~~ > 210721
 - bg와 quote 랜덤으로 불러오는 버튼 추가하기
 - 로컬저장소의 username을 삭제하고 다시 폼태그가 등장하게 하는 버튼 추가하기
 
