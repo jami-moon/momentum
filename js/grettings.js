@@ -55,3 +55,14 @@ if (savedUsername === null) {
   paintGreetings(savedUsername);
   // 유저정보가 있으면 h1에 텍스트 추가하고 표시하기
 }
+
+// greeting 입력 후 재클릭 시 수정하기
+
+greeting.addEventListener("click", () => {
+  if (greeting.classList.contains("show")) {
+    localStorage.removeItem(USERNAME_KEY);
+    greeting.classList.remove("show");
+    greeting.classList.add(HIDDEN_CLASSNAME);
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+  }
+});

@@ -141,13 +141,40 @@ section {
 }
 
 .greeting {
+  position: relative;
   display: block;
   height: 5rem;
   color: #fff;
   font-size: 2.5rem;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+  transition: all 0.5s;
 }
+
+.greeting::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  content: "(클릭 시 이름 수정이 가능 합니다.)";
+  transition: all 0.5s;
+}
+
+.greeting:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.greeting:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 .login-form {
   height: 5rem;
   display: flex;
