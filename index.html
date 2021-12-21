@@ -17,12 +17,12 @@
         <div id="clock" class="clock">
           <h2 class="clock__time">00:00:00</h2>
           <span class="clock__ampm"></span>
-          <button class="clock__btn">
+          <button class="clock__btn" type="button">
             <div class="clock__btn-info hidden">24/12-hour clock</div>
           </button>
         </div>
         <h1 id="greeting" class="greeting hidden">Hello!</h1>
-        <form id="login-form" class="login-form hidden">
+        <form id="login-form" class="login-form hidden" action="" method="GET">
           <input
             class="login-form__name"
             required
@@ -30,9 +30,9 @@
             type="text"
             placeholder="What is your name?"
           />
-          <button class="login-form__btn">Log in</button>
+          <button class="login-form__btn" type="submit">Log in</button>
         </form>
-        <form action="" id="todo-form" class="todo-form">
+        <form id="todo-form" class="todo-form" action="" method="GET">
           <p class="todo-form__question">What is your main focus for today?</p>
           <input
             class="todo-form__input"

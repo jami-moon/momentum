@@ -38,7 +38,6 @@ function paintToDo(newToDoIn) {
   // 입력된 value값을 받아서 리스트에 추가시키는 함수 선언
   // 반복되는 설명이지만 이 함수의 파라미터는 아래 선언된 newToDo하고는 관련이 없다.
   // 그냥 그릇 같은 것이기 때문에 아무 문자나 가능하다.
-
   const toDoListItem = document.createElement("li");
   toDoListItem.id = newToDoIn.id;
   toDoListItem.className = "todo-list__item";

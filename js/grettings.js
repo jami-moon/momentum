@@ -2,8 +2,8 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+const HIDDEN_CLASSNAME = `hidden`;
+const USERNAME_KEY = `username`;
 // 많이 쓰이는 문자열을 오타방지를 위해 변수로 설정
 // 단순한 string 변수 선언은 대문자로(사람마다 다름)
 
@@ -15,6 +15,7 @@ function onLoginSubmit(event) {
   // form 숨기기
 
   const username = loginInput.value;
+
   localStorage.setItem(USERNAME_KEY, username);
   // 로컬저장소에 username 저장
 
