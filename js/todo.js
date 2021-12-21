@@ -54,9 +54,6 @@ function paintToDo(newToDoIn) {
   removeListBtn.className = "todo-list__btn--remove";
   // 리스트를 삭제하는 버튼 요소 생성 변수
 
-  removeListBtn.innerText = "❌";
-  // 삭제 버튼에 이모지 텍스트 추가
-
   removeListBtn.addEventListener("click", deleteToDo);
   // 삭제 버튼에 클릭 이벤트를 발생시키기
 

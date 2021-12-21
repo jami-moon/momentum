@@ -279,11 +279,40 @@ section {
 }
 
 .todo-list__btn--remove {
+  position: relative;
   margin-left: 1rem;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   font-size: 0.5rem;
   outline: none;
   border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-list__btn--remove::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  display: block;
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  content: "";
+}
+
+.todo-list__btn--remove::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  display: block;
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  content: "";
 }
 
 /* 명언구 */
