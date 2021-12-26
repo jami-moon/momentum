@@ -91,6 +91,7 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .clock__btn-info {
+  display: block;
   width: 10rem;
   height: 2rem;
   background-color: rgba(0, 0, 0, 0.6);

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum</title>
+    <!-- reset CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- 메인 영역 -->
     <section class="main">
       <div class="inner">
         <!-- 시계 -->
@@ -20,12 +22,12 @@
           <h2 class="clock__time">00:00:00</h2>
           <span class="clock__ampm"></span>
           <button class="clock__btn" type="button">
-            <div class="clock__btn-info hidden">24/12-hour clock</div>
+            <span class="clock__btn-info hidden">24/12-hour clock</span>
           </button>
         </div>
         <!-- 이름입력 & 인삿말 -->
         <h1 id="greeting" class="greeting hidden">Hello!</h1>
-        <form id="login-form" class="login-form hidden" action="" method="GET">
+        <form id="login-form" class="login-form hidden" action="#" method="GET">
           <input
             class="login-form__name"
             required
@@ -36,7 +38,7 @@
           <button class="login-form__btn" type="submit">Log in</button>
         </form>
         <!-- 투두 리스트 -->
-        <form id="todo-form" class="todo-form" action="" method="GET">
+        <form id="todo-form" class="todo-form" action="#" method="GET">
           <p class="todo-form__question">What is your main focus for today?</p>
           <input
             class="todo-form__input"
