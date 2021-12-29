@@ -28,7 +28,7 @@ function getClock() {
     const changedHours = (hours %= 12);
 
     // 12로 나눠져 0이라는 falsy한 값이 되면 12를 출력 (12시니까)
-    changedhours = changedHours || 12;
+    changedHours = changedHours || 12;
 
     // 화면에 표시
     time.innerText = `${changedHours}:${minutes}:${seconds}`;
