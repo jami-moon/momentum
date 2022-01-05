@@ -16,7 +16,9 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       const city = document.querySelector("#weather .weather__city");
-      const weatherCondition = document.querySelector("#weather .weather__condition");
+      const weatherCondition = document.querySelector(
+        "#weather .weather__condition"
+      );
       const weatherTemper = document.querySelector("#weather .weather__temper");
 
       city.innerText = `You're in ${data.name}`;
@@ -32,4 +34,4 @@ function onGeoError() {
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-// nabigator 객체와 속성, 메서드를 사용하여 성공, 실패함수 호출
+// navigator 객체와 속성, 메서드를 사용하여 성공, 실패함수 호출
